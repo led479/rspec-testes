@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <p>Nome: <%= user.username %></p>
+  <p>Email: <%= user.email %> <%= link_to "Perfil", user_path(user) %></p>
+<% end %>
+<%= link_to "Criar usuário", new_user_path %>
