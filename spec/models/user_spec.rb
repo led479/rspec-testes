@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
   let(:invaliduser) { FactoryBot.build(:user, username: "aaaaa")}
   context "validations" do
     it "should have a name" do
-      expect(user.username).to eq("MyString")
+      expect(user).to be_valid
     end
     it "has a name between 6 and 20 characters" do
       invaliduser.save
